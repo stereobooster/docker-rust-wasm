@@ -5,7 +5,10 @@ Preinstalled dependencies for https://rustwasm.github.io/book/game-of-life/setup
 ## Usage
 
 ```
-docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp --rm --interactive --tty --user "$(id -u)":"$(id -g)" stereobooster/rust-wasm
+docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp --rm --interactive --tty stereobooster/rust-wasm
+USER=<user name> cargo generate --git https://github.com/rustwasm/wasm-pack-template
+cd <project name>
+wasm-pack init
 ```
 
 ## Development
